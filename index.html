@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chúc mừng 20/10 💗</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #fff0f6;
+            color: #7a3150;
+            overflow-x: hidden;
+        }
+
+        /* HOA RƠI */
+        .flower {
+            position: fixed;
+            top: -50px;
+            font-size: 25px;
+            animation: fall linear infinite;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* MENU */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0 3px 20px rgba(200, 70, 120, 0.1);
+
+            z-index: 999;
+        }
+
+        nav h2 {
+            color: #e85b91;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #9b4166;
+            margin-left: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e83f82;
+        }
+
+        /* TRANG CHỦ */
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 120px 20px 80px;
+
+            background:
+                radial-gradient(circle at 20% 20%, #ffd6e7 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, #ffc5dc 0%, transparent 30%),
+                linear-gradient(135deg, #fff5f9, #ffe2ee);
+        }
+
+        .small-title {
+            font-size: 20px;
+            color: #d94d83;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 80px);
+            color: #d93678;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 20px rgba(217, 54, 120, 0.15);
+        }
+
+        .hero h1 span {
+            color: #f06b9d;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #86506a;
+            margin-bottom: 35px;
+        }
+
+        /* NÚT NHẬN LỜI CHÚC */
+        .main-button {
+            border: none;
+
+            padding: 16px 32px;
+
+            border-radius: 50px;
+
+            background: linear-gradient(135deg, #ed5c96, #d93477);
+
+            color: white;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow: 0 10px 25px rgba(217, 52, 119, 0.3);
+
+            transition: 0.3s;
+        }
+
+        .main-button:hover {
+            transform: translateY(-4px) scale(1.03);
+
+            box-shadow:
+                0 15px 30px rgba(217, 52, 119, 0.4);
+        }
+
+        /* LỜI CHÚC */
+        .wishes {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 40px;
+            color: #d93678;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #9a6178;
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            min-height: 230px;
+
+            padding: 35px 25px;
+
+            background: rgba(255,255,255,0.9);
+
+            border-radius: 25px;
+
+            border: 1px solid #ffd0e1;
+
+            box-shadow:
+                0 10px 35px rgba(200, 70, 120, 0.1);
+
+            transition: 0.3s;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "♡";
+
+            position: absolute;
+
+            top: -15px;
+            right: 15px;
+
+            font-size: 90px;
+
+            color: rgba(240, 92, 150, 0.08);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 20px 40px rgba(200, 70, 120, 0.18);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #d93678;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            color: #86566d;
+        }
+
+        /* PHẦN ĐẶC BIỆT */
+        .special {
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f78eb5,
+                    #e95491
+                );
+
+            color: white;
+        }
+
+        .special h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .special p {
+            max-width: 700px;
+
+            margin: auto;
+
+            font-size: 19px;
+
+            line-height: 1.8;
+        }
+
+        .special-button {
+            margin-top: 30px;
+
+            background: white;
+            color: #d93678;
+
+            border: none;
+
+            padding: 15px 30px;
+
+            border-radius: 50px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .special-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* THÔNG ĐIỆP */
+        .message {
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background: #fff7fa;
+        }
+
+        .message-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 50px 35px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 15px 50px rgba(200, 70, 120, 0.12);
+
+            border: 1px solid #ffd7e5;
+        }
+
+        .message-box .heart {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .message-box p {
+            font-size: 21px;
+
+            line-height: 1.9;
+
+            color: #7c4b61;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px;
+
+            text-align: center;
+
+            background: #d93678;
+
+            color: white;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* POPUP */
+        .popup {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(80, 20, 45, 0.5);
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 2000;
+
+            padding: 20px;
+        }
+
+        .popup-content {
+            max-width: 550px;
+
+            width: 100%;
+
+            background: #fff;
+
+            border-radius: 30px;
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            animation: popup 0.4s ease;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        @keyframes popup {
+
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .popup-content .popup-flower {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .popup-content h2 {
+            color: #d93678;
+            margin-bottom: 20px;
+        }
+
+        .popup-content p {
+            font-size: 19px;
+
+            line-height: 1.8;
+
+            color: #805268;
+        }
+
+        .close-button {
+            margin-top: 25px;
+
+            border: none;
+
+            padding: 12px 25px;
+
+            border-radius: 50px;
+
+            background: #e95491;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 15px;
+        }
+
+        .close-button:hover {
+            background: #d93678;
+        }
+
+        /* TRÁI TIM BAY */
+        .heart-effect {
+            position: fixed;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            z-index: 3000;
+
+            animation:
+                heartFly 1.5s ease-out forwards;
+        }
+
+        @keyframes heartFly {
+
+            0% {
+                transform:
+                    translateY(0)
+                    scale(1);
+
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-150px)
+                    scale(1.8);
+
+                opacity: 0;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            nav h2 {
+                font-size: 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 13px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .special h2 {
+                font-size: 32px;
+            }
+
+            .message-box {
+                padding: 35px 20px;
+            }
+
+            .message-box p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HOA RƠI -->
+
+    <div class="flower"
+         style="left: 5%; animation-duration: 8s;">
+        🌸
+    </div>
+
+    <div class="flower"
+         style="left: 20%; animation-duration: 11s; animation-delay: 2s;">
+        🌷
+    </div>
+
+    <div class="flower"
+         style="left: 40%; animation-duration: 9s; animation-delay: 1s;">
+        🌸
+    </div>
+
+    <div class="flower"
+         style="left: 60%; animation-duration: 12s; animation-delay: 3s;">
+        🌺
+    </div>
+
+    <div class="flower"
+         style="left: 80%; animation-duration: 10s; animation-delay: 4s;">
+        🌷
+    </div>
+
+    <div class="flower"
+         style="left: 95%; animation-duration: 13s; animation-delay: 1s;">
+        🌸
+    </div>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <h2>💗 20/10</h2>
+
+        <div>
+
+            <a href="#home">
+                Trang chủ
+            </a>
+
+            <a href="#wishes">
+                Lời chúc
+            </a>
+
+            <a href="#message">
+                Thông điệp
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- TRANG CHỦ -->
+
+    <section class="hero" id="home">
+
+        <div class="small-title">
+            🌷 HAPPY VIETNAMESE WOMEN'S DAY 🌷
+        </div>
+
+        <h1>
+            Chúc mừng <span>20/10</span> 💕
+        </h1>
+
+        <p>
+            Nhân ngày Phụ nữ Việt Nam 20/10,
+            xin gửi những lời chúc ngọt ngào
+            và tốt đẹp nhất đến những người
+            phụ nữ tuyệt vời.
+        </p>
+
+        <button
+            class="main-button"
+            onclick="openWish()">
+
+            💌 Nhận lời chúc
+
+        </button>
+
+    </section>
+
+
+    <!-- CÁC LỜI CHÚC -->
+
+    <section
+        class="wishes"
+        id="wishes">
+
+        <h2 class="section-title">
+            Những lời chúc yêu thương 💕
+        </h2>
+
+        <p class="section-subtitle">
+            Một chút yêu thương gửi đến
+            những người phụ nữ đặc biệt
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">
+                    🌷
+                </div>
+
+                <h3>
+                    Luôn xinh đẹp
+                </h3>
+
+                <p>
+                    Chúc bạn luôn xinh đẹp,
+                    rạng rỡ, tự tin và luôn
+                    nở nụ cười thật tươi
+                    trên môi mỗi ngày.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💐
+                </div>
+
+                <h3>
+                    Luôn hạnh phúc
+                </h3>
+
+                <p>
+                    Chúc bạn luôn được
+                    yêu thương, trân trọng
+                    và có thật nhiều khoảnh
+                    khắc hạnh phúc bên
+                    những người mình yêu quý.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💖
+                </div>
+
+                <h3>
+                    Luôn thành công
+                </h3>
+
+                <p>
+                    Chúc mọi ước mơ của bạn
+                    đều trở thành hiện thực.
+                    Mong rằng mỗi ngày mới
+                    đều mang đến những
+                    điều tuyệt vời.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Luôn tỏa sáng
+                </h3>
+
+                <p>
+                    Hãy luôn là chính mình,
+                    mạnh mẽ, độc lập và
+                    tỏa sáng theo cách
+                    riêng của bạn.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHẦN ĐẶC BIỆT -->
+
+    <section class="special">
+
+        <h2>
+            🌸 Gửi đến những người
+            phụ nữ tuyệt vời 🌸
+        </h2>
+
+        <p>
+            Cảm ơn vì đã làm cho thế giới này
+            trở nên dịu dàng, ấm áp và xinh đẹp hơn.
+            Chúc cho mỗi người phụ nữ luôn được
+            yêu thương, được sống theo điều mình
+            mong muốn và luôn giữ được nụ cười
+            trên môi.
+        </p>
+
+        <button
+            class="special-button"
+            onclick="specialWish()">
+
+            💗 Một điều bất ngờ
+
+        </button>
+
+    </section>
+
+
+    <!-- THÔNG ĐIỆP -->
+
+    <section
+        class="message"
+        id="message">
+
+        <div class="message-box">
+
+            <div class="heart">
+                💕
+            </div>
+
+            <p>
+                “Không cần phải trở thành
+                một ai khác.
+                Bạn đã đủ tuyệt vời
+                theo cách của riêng mình.
+                Mong rằng những điều tốt đẹp nhất
+                sẽ luôn tìm đến bạn.”
+            </p>
+
+            <br>
+
+            <strong style="color:#d93678;">
+
+                Chúc mừng ngày
+                Phụ nữ Việt Nam 20/10! 🌷
+
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            💗 Happy Women's Day 20/10 💗
+        </p>
+
+        <p>
+            Made with love 🌸
+        </p>
+
+    </footer>
+
+
+    <!-- POPUP LỜI CHÚC -->
+
+    <div
+        class="popup"
+        id="popup">
+
+        <div class="popup-content">
+
+            <div class="popup-flower">
+                💐
+            </div>
+
+            <h2>
+                Một lời chúc dành cho bạn 💗
+            </h2>
+
+            <p id="wishText">
+                Chúc bạn luôn vui vẻ,
+                hạnh phúc và xinh đẹp!
+            </p>
+
+            <button
+                class="close-button"
+                onclick="closeWish()">
+
+                Đóng 💕
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        /* =========================
+           3 LỜI CHÚC
+        ========================= */
+
+        const wishes = [
+
+            "🌷 Đmm, chúc mày một ngày 20/10 vui vẻ, sang năm đừng đòi quà tao nữa! 💗",
+
+            "💐 Conmemay, chúc mày một ngày 20/10 hạnh phúc, luôn luôn vui vẻ, tràn đầy sức sống, đầu buồi, đầu dái, đầu chim!  ✨",
+
+            "💖 Chúc mày 20/10 vui vẻ, tiền vào như nước tiền ra nhỏ giọt như caffeine. Cho tao xin 50k. 🌸"
+
+        ];
+
+
+        /* =========================
+           NHẬN LỜI CHÚC
+        ========================= */
+
+        function openWish() {
+
+            // Chọn ngẫu nhiên 1 trong 3 lời chúc
+
+            const randomIndex =
+                Math.floor(
+                    Math.random() * wishes.length
+                );
+
+            // Đưa lời chúc vào popup
+
+            document.getElementById("wishText")
+                .innerHTML = wishes[randomIndex];
+
+            // Hiện popup
+
+            document.getElementById("popup")
+                .style.display = "flex";
+
+            // Hiệu ứng trái tim
+
+            createHearts(12);
+        }
+
+
+        /* =========================
+           ĐÓNG POPUP
+        ========================= */
+
+        function closeWish() {
+
+            document.getElementById("popup")
+                .style.display = "none";
+
+        }
+
+
+        /* =========================
+           ĐIỀU BẤT NGỜ
+        ========================= */
+
+        function specialWish() {
+
+            const randomIndex =
+                Math.floor(
+                    Math.random() * wishes.length
+                );
+
+            alert(wishes[randomIndex]);
+
+            createHearts(20);
+        }
+
+
+        /* =========================
+           TRÁI TIM BAY
+        ========================= */
+
+        function createHearts(number) {
+
+            for (let i = 0; i < number; i++) {
+
+                const heart =
+                    document.createElement("div");
+
+                heart.className =
+                    "heart-effect";
+
+                heart.innerHTML =
+                    [
+                        "💗",
+                        "💕",
+                        "💖",
+                        "💝",
+                        "🌸"
+                    ][
+                        Math.floor(
+                            Math.random() * 5
+                        )
+                    ];
+
+                heart.style.left =
+                    Math.random() * 100 + "vw";
+
+                heart.style.top =
+                    (50 + Math.random() * 40) + "vh";
+
+                heart.style.animationDuration =
+                    (1 + Math.random() * 1.5) + "s";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+
+                    heart.remove();
+
+                }, 2500);
+
+            }
+        }
+
+
+        /* =========================
+           CLICK RA NGOÀI POPUP
+        ========================= */
+
+        document.getElementById("popup")
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    if (event.target === this) {
+                        closeWish();
+                    }
+
+                }
+            );
+
+    </script>
+
+</body>
+</html>
